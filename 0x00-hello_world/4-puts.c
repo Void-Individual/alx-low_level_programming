@@ -1,4 +1,5 @@
 #include<stdio.h>
+/*string begins*/
 int main(void)/*string begins*/
 /*string begins*/
 {
