@@ -1,9 +1,11 @@
 #include<stdio.h>
-/*string begins*/
-int main(void)/*string begins*/
-/*string begins*/
+/**
+*main - initialzes printed string
+*
+*Return: 0 (success)
+*/
+int main(void)
 {
-/*string begins*/
 char string[] = "\"Programming is like building a multilingual puzzle";
 
 puts(string);
