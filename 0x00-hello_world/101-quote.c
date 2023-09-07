@@ -1,0 +1,12 @@
+#include<stdio.h>
+/**
+*main - the function used to initialize output
+*
+*Return: 1 (Requirement for this program)
+*
+*/
+int main(void)
+{
+printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+return (1);
+}
