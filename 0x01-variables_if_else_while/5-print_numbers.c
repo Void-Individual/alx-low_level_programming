@@ -14,10 +14,10 @@ while (num <= '9')
 printf("%d", num);
 /*increment by 1*/
 num++;
-}
 /*set a condition for when the final value is reached*/
 if (num == '9')
 /*print a newline*/
 printf("\n");
+}
 return (0);
 }

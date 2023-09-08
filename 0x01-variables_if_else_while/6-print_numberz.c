@@ -15,10 +15,10 @@ while (num <= '9')
 putchar(num);
 /*increment by 1*/
 num++;
-}
 /*set a condition for when the final value is reached*/
 if (num == '9')
 /*print a newline*/
 putchar('\n');
+}
 return (0);
 }
