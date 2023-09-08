@@ -8,17 +8,17 @@ int main(void)
 /*set variable for the value*/
 int num = 0;
 /*set the conditions*/
-while (num < '10')
+while (num < 10)
 {
 /*print output*/
 putchar(num + '0');
-/*print comma with space*/
-putchar(', ');
+/*print comma*/
+putchar(',');
 /*print space*/
 putchar(' ');
 /*add increment*/
 num++;
 }
-putchar('\');
+putchar('\n');
 return (0);
 }
