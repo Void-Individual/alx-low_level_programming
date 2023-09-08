@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-/*declare alpha as a to begin the range a - z*/
+/*declare variable a to begin the range a - z*/
 char alpha = 'a';
 /*print the value of alpha if its z*/
 while (alpha <= z)
