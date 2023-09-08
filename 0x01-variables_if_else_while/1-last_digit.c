@@ -11,10 +11,10 @@ int main(void)
 int n;
 int l;
 srand(time(0));
-n = rand() - RAND_MAX / 2;
-l = n % 10;
+int n = rand() - RAND_MAX / 2;
+int l = n % 10;
 /**
-*This process divides the random value of n by 10
+*l - this int will divide n by 10
 *
 *and leaves the last digit as the remainder
 */
