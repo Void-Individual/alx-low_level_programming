@@ -11,7 +11,7 @@ int num = 0;
 while (num <= 9)
 {
 /*print output*/
-putchar('num');
+putchar(48 + num);
 /*increment by 1*/
 num++;
 /*set a condition for when the final value is reached*/
