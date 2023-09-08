@@ -9,9 +9,9 @@
 int main(void)
 {
 int n;
+int l;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-int l;
 l = n % 10;
 /**
 *This process divides the random value of n by 10
