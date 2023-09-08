@@ -6,10 +6,10 @@
 */
 int main(void)
 {
-/*declare variable a to begin the range a - z*/
+/*declare variable a to initialize the range a - z*/
 char alpha = 'a';
-/*print the value of alpha if its z*/
-while (alpha <= z)
+/*check the last variable, if it is less*/
+while (alpha <= 'z')
 {
 /*print the value of the alpha*/
 putchar (alpha);
