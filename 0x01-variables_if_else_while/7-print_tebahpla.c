@@ -6,9 +6,9 @@
 int main(void)
 {
 /*set variable for z to cover range z - a*/
-char alpha = z;
+char alpha = 'z';
 /*set a conditionto compare its values*/
-while (alpha >= a)
+while (alpha >= 'a')
 {
 /*print the output character*/
 putchar(alpha);

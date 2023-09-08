@@ -8,7 +8,7 @@ int main(void)
 /*declare variables for the hexadecimal numbers*/
 int num = 0;
 /*declare variables for the hexadecimal letters*/
-char alpha = a;
+char alpha = 'a';
 /*give the conditions for output of hexa numbers*/
 while (num <= 9)
 {
@@ -18,7 +18,7 @@ putchar(48 + num);
 num++;
 }
 /*give condition for output of hexa letters*/
-while (alpha <= f)
+while (alpha <= 'f')
 {
 /*print output value*/
 putchar(alpha);
