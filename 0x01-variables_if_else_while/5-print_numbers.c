@@ -15,7 +15,7 @@ printf("%d", num);
 /*increment by 1*/
 num++;
 /*set a condition for when the final value is reached*/
-if (num == 9)
+if (num == 10)
 /*print a newline*/
 printf("\n");
 }
