@@ -6,15 +6,17 @@
 */
 int main(void)
 {
-/*alpha will be the first letter a*/
+/*declare alpha as a to begin the range a - z*/
 char alpha = 'a';
-/*you print every letter that comes before z*/
-for (char alpha = 'a'; alpha < z; alpha++)
-putchar (alpha);
-/*then input the letter z followed by a newline*/
-if (char alpha == z)
+/*print the value of alpha if its z*/
+while (alpha <= z)
 {
-putchar (alpha\n);
+/*print the value of the alpha*/
+putchar (alpha);
+/*increment alpha*/
+alpha++;
 }
+/*print a newline*/
+putchar ('\n');
 return (0);
 }
