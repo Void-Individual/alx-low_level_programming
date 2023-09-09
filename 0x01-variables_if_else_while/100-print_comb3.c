@@ -12,12 +12,8 @@ int unit;
 while (ten < 9)
 {
 /*to ensure that unit will never be equal to ten*/
-for (unit = 0; unit = ten + 1; unit++)
+for (unit = ten + 1; unit <= 9; unit++)
 {
-/*set condition for unit isn't more than 9*/
-if (unit <= 9)
-{
-/*to ensure there be no coincidental repetition*/
 if (ten != unit)
 {
 /*print the ten*/
