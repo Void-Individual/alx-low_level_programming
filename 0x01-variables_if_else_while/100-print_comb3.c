@@ -29,9 +29,9 @@ if (ten != 8 && unit != 9)
 putchar(',');
 putchar(' ');
 }
+}
 /*continue to increment until limit is reached*/
 unit++;
-}
 }
 /*when unit has completed current cycle increment ten*/
 ten++;
