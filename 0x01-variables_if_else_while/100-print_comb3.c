@@ -6,10 +6,10 @@
 int main(void)
 {
 /*set variable for the first and second digits*/
-int ten = 0;
+int ten = '0';
 int unit;
 /*to ensure that unit will never be equal to ten*/
-unit = ten + 1;
+unit = ten + '1';
 /*set condition for ten is less than 9*/
 while (ten < '9')
 {
@@ -24,7 +24,7 @@ putchar(ten);
 /*print the unit*/
 putchar(unit);
 /*set condition to print period until the last combo*/
-if (ten != 8 && unit != 9)
+if (ten != '8' && unit != '9')
 {
 putchar(',');
 putchar(' ');
