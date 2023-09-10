@@ -21,7 +21,7 @@ putchar(ten + 48);
 /*print the unit*/
 putchar(unit + 48);
 /*set condition to print period until the last combo*/
-if (ten != 8 && unit != 9)
+while (ten != 8 & unit != 9)
 {
 putchar(',');
 putchar(' ');
