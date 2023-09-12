@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-*main - print the alphabet in lowercase, with a newline
-*Return: 0 (Success)
+*print_alphabet - print the alphabet in lowercase, with a newline
+*Return will be empty, since we begin with void
 */
-int main(void)
+void print_alphabet(void)
 {
 /*set starting variable a */
 char alpha = 'a';
@@ -11,11 +11,11 @@ char alpha = 'a';
 while (alpha <= 'z')
 {
 /*print the letter*/
-putchar(alpha);
+_putchar(alpha);
 /*increment the value by 1*/
 alpha++;
 }
 /*print the newline seprately*/
-putchar('\n');
-return (0);
+_putchar('\n');
+/*there will be no return value, since we are using void*/
 }
