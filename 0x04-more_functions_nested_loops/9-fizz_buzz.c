@@ -27,7 +27,8 @@ int main(void)
 			printf("Buzz");
 		if (y != 0 && z != 0)
 			printf("%d", x);
-		putchar(' ');
+		if (x != 100)
+			putchar(' ');
 	}
 
 	return (0);
