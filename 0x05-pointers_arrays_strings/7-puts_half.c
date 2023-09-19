@@ -10,10 +10,7 @@
 void puts_half(char *str)
 {
 	int x = 0;
-	int n;
-	int y = 0;
-	int z;
-	int a;
+	int n = 0;
 
 	while (x >= 0)
 	{
@@ -21,18 +18,16 @@ void puts_half(char *str)
 			break;
 	}
 
-	z = x - 1;
-	n = z / 2;
-	a = n % 2;
+	if (x % 2 == 0)
+		n = x - 1 / 2;
+	else
+		n = x / 2;
 
-	if (a > 0)
+	while (n <= x)
 	{
-		y = n;
-		while (y <= x)
-		{
-			_putchar(str[y]);
-			y++;
-		}
+		_putchar(str[n]);
+		n++;
 	}
 
+	_putchar('\n');
 }
