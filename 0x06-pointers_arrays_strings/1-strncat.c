@@ -22,6 +22,9 @@ char *_strncat(char *dest, char *src, int n)
 			break;
 
 		*(dest + x) = *(src + y);
+
+		if (*(src + y) == '\0')
+			break;
 		x++;
 		y++;
 	}
