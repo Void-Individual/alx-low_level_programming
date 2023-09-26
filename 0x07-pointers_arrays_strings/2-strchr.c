@@ -10,8 +10,6 @@ char *_strchr(char *s, char c)
 {
 	int x = 0;
 	int y = 0;
-	int z = 0;
-	char *a = 0;
 
 	while (*(s + x) != '\0')
 	x++;
@@ -19,16 +17,7 @@ char *_strchr(char *s, char c)
 	for (y = 0; y < x; y++)
 	{
 		if (*(s + y) == c)
-			break;
-		if (*(s + y) == '\0')
-			return (0);
+			return (s + y);
 	}
-
-	for (z = 0; y < x; y++)
-	{
-		z++;
-		*(a + z) = *(s + y);
-	}
-
-	return (a);
+	return ('\0');
 }
