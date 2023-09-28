@@ -11,7 +11,7 @@ int _cp_test(int n, int a)
 	if (a == 1)
 		return (1);
 	if ((n % a) == 0)
- 		return (0);
+		return (0);
 	return (_cp_test(n, a - 1));
 }
 
