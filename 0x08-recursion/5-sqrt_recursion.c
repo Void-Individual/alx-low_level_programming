@@ -8,11 +8,11 @@
 
 int _square_trials(int n, int a)
 {
-        if (a * a == n)
-                return (a);
-        if (a * a > n)
-                return (-1);
-        return (_square_trials(n, a + 1));
+	if (a * a == n)
+		return (a);
+	if (a * a > n)
+		return (-1);
+	return (_square_trials(n, a + 1));
 }
 
 /**
