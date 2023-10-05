@@ -3,7 +3,7 @@
  * main - a function that prints out the arguments it recieves
  * @argc: argument count
  * @argv: argument string
- * Return: 1
+ * Return: 0 - succes
  */
 
 int main(int argc, char *argv[])
@@ -14,5 +14,5 @@ int main(int argc, char *argv[])
 	{
 		printf("%s\n", argv[count]);
 	}
-	return (1);
+	return (0);
 }
