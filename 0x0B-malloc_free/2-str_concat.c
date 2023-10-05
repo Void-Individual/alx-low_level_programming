@@ -23,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 
 	c = a + b;
 
-	ptr = (char *)malloc(c - 1);
+	ptr = (char *)malloc(c + 1);
 
 	if (ptr == NULL)
 		return (NULL);
@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 	for (d = 0; d < a; d++)
 		ptr[d] = s1[d];
 
-	for (b = 0; d <= c - 1; d++, b++)
+	for (b = 0; d <= c; d++, b++)
 		ptr[d] = s2[b];
 
 	return (ptr);
