@@ -6,11 +6,12 @@
  * Return: 0 for success
  */
 
-int main(int argc, char *argv[] _attribute_((unused)))
+int main(int argc, char *argv[])
 {
 	if (argc >= 1)
 	{
 		printf("%d\n", argc - 1);
 	}
+	argv[0] = argv[0];
 	return (0);
 }
