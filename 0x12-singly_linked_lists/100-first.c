@@ -2,11 +2,16 @@
 #include "lists.h"
 
 /**
- * first - execute function before main
+ * first - function to allow execution
  * Return: empty
 */
 
 void first(void) __attribute__((constructor));
+
+/**
+ * first - function to be executed before main
+ * Return: empty
+*/
 
 void first(void)
 {
