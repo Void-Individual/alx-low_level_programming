@@ -3,7 +3,7 @@
 /**
  * pop_listint - to delete head node of a list
  * @head: pointer to the list address
- * Return: data of deleted head
+ * Return: data of deleted head, else 0 if head is null
 */
 
 int pop_listint(listint_t **head)
@@ -12,12 +12,12 @@ int pop_listint(listint_t **head)
 	int data = 0;
 
 	if (*head == NULL)
-		return (0);
+		return (data);
 
 	node = *head;
 	data = node->n;
-	free(*head);
 	*head = node->next;
+	free(node);
 
 	return (data);
 }
