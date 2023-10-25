@@ -1,0 +1,14 @@
+{
+        "editor.insertSpaces": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "git.autofetch": true,
+        "explorer.confirmDelete": false,
+        "files.autoSave": "onFocusChange",
+        "editor.renderWhitespace": "trailing",
+        "editor.comments.insertSpace": false,
+        "editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
+        "editor.tabSize": 8,
+        "files.trimTrailingWhitespace": true,
+        "editor.indentSize": "tabSize",
+        "editor.stickyTabStops": true
+}
