@@ -8,21 +8,26 @@
 
 void print_binary(unsigned long int n)
 {
-	char binary = "";
-	char new;
+	int shift;
+	int first_zero = 1;
+	int bit;
+	unsigned long int mask;
 
-	if (n == 0)
+	shift = sizeof(unsigned long int ) * 8 - 1;
+	while (shift >= 0)
 	{
-		_putchar(n);
-		return;
-	}
+		mask = 1UL << shift;
+		bit = (n & mask) != 0;
 
-	while (n >= 0)
-	{
-		if (n & 1 == 0)
-			_putchar('0');
-		else
+		if (bit)
+		{
 			_putchar('1');
-		n = n >> 1;
+			first_zero = 0;
+		}
+
+		else if (!first_zero || shift == 0)
+			_putchar('0');
+
+		shift--;
 	}
 }
