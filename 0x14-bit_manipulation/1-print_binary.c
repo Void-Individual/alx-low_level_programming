@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 	int bit;
 	unsigned long int mask;
 
-	shift = sizeof(unsigned long int ) * 8 - 1;
+	shift = sizeof(unsigned long int) * 8 - 1;
 	while (shift >= 0)
 	{
 		mask = 1UL << shift;
