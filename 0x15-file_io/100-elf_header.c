@@ -31,7 +31,7 @@ void print_addr(char *ptr)
 
 	if (sys == '2')
 	{
-		begin = 26;
+		start = 26;
 		for (i = start; i > 23; i--)
 		{
 			if (ptr[i] >= 0)
