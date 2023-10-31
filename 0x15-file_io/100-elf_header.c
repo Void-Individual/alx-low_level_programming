@@ -8,7 +8,7 @@ void print_error_and_exit(const char* message)
 
 void print_elf_info(const char* file)
 {
-	int fd;
+	int fd, i;
 	Elf64_Ehdr elf_header;
 
 	fd = open(file, O_RDONLY);
@@ -22,7 +22,7 @@ void print_elf_info(const char* file)
 		print_error_and_exit("Not an ELF file");
 
 	printf("Magic:   ");
-	for (int i = 0; i < EI_NIDENT; i++)
+	for (i = 0; i < EI_NIDENT; i++)
 		printf("%02x ", elf_header.e_ident[i]);
 	printf("\nClass:   %s\n", (elf_header.e_ident[EI_CLASS] == ELFCLASS32) ? "ELF32" : "ELF64");
 	printf("Data:    %s\n", (elf_header.e_ident[EI_DATA] == ELFDATA2LSB) ? "2's complement, little endian" : "2's complement, big endian");
