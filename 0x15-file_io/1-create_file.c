@@ -16,25 +16,21 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC | S_IRUSR | S_IWUSR);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)
-	{
-		perror("Error opening file");
 		return (-1);
-	}
 
 	if (text_content != NULL)
-		while (text_content[len] != '\0')
-			len++;
+		text_content = "";
+
+	while (text_content[len] != '\0')
+		len++;
 
 	wr = write(fd, text_content, len);
 	if (wr < 0 || wr != len)
-	{
-		perror("Error writing in file");
 		return (-1);
-	}
-	else
-		close(fd);
+
+	close(fd);
 
 	return (1);
 }
