@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <elf.h>
+#include <sys/types.h>
 
 #define BUFF_SIZE 64
 
