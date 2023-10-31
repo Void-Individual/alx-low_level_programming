@@ -16,25 +16,22 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t rd, wr;
 	char *file;
 
-	if (filename == NULL)
+	if (!filename)
 		return (0);
+
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-	{
-		perror("Error opening file");
 		return (0);
-	}
+
 	file = malloc(sizeof(char) * letters);
-	if (file == NULL)
+	if (!file)
 	{
-		perror("Error with memory allocation");
 		close(fd);
 		return (0);
 	}
 	rd = read(fd, file, letters);
 	if (rd < 0)
 	{
-		perror("Error reading from file");
 		free(file);
 		close(fd);
 		return (0);
@@ -42,7 +39,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	wr = write(STDOUT_FILENO, file, rd);
 	if (wr < 0 || wr != rd)
 	{
-		perror("Error writing to standard output");
 		free(file);
 		close(fd);
 		return (0);
