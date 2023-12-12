@@ -1,19 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
+static int currentLuckIndex = 0;
 
-/**
- * main - a function to preceed gm
-*/
-
-void main(void)
+int customRandomNumberGenerator(void)
 {
-	char **argv;
-	char *x = *argv;
+	int luckyNumbers[] = {8, 8, 7, 9, 23, 74};
+	const int numberOfLuckyNumbers = sizeof(luckyNumbers) / sizeof(luckyNumbers[0]);
+	int result = luckyNumbers[currentLuckIndex];
+	currentLuckIndex = (currentLuckIndex + 1) % numberOfLuckyNumbers;
 
-	if (x[1] == 9 && x[2] == 8 && x[3] == 10 && x[4] == 24
-	&& x[5] == 75 && x[6] == 9)
-	{
-		printf("--> Please make me win!\n");
-		exit(0);
-	}
+	return result;
 }
