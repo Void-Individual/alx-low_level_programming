@@ -1,0 +1,9 @@
+[submodule "monty"]
+	path = monty
+	url = https://github.com/hisreal123/monty.git
+[submodule "printf"]
+	path = printf
+	url = https://github.com/hisreal123/printf.git
+[submodule "simple_shell"]
+	path = simple_shell
+	url = https://github.com/hisreal123/simple_shell.git
