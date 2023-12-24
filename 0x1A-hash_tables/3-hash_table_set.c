@@ -2,14 +2,26 @@
 
 /**
  * new_node - function to create a new hash node
+ * @head: pointer to the head of the index
  * @key: key of the value
  * @value: value to be stored
  * Return: address of the new node or null
 */
 
-hash_node_t *new_node(const char *key, const char *value)
+hash_node_t *new_node(hash_node_t **head, const char *key, const char *value)
 {
-	hash_node_t *new;
+	hash_node_t *new, *temp = *head;
+
+	while (temp)
+	{
+		if (strcmp(temp->key, key) == 0)
+		{
+			free(temp->value);
+			temp->value = strdup(value);
+			return (*head);
+		}
+		temp = temp->next;
+	}
 
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
@@ -20,9 +32,10 @@ hash_node_t *new_node(const char *key, const char *value)
 
 	new->key = strdup(key);
 	new->value = strdup(value);
-	new->next = NULL;
+	new->next = *head;
+	*head = new;
 
-	return (new);
+	return (*head);
 }
 
 /**
@@ -36,7 +49,7 @@ hash_node_t *new_node(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new;
-	int index;
+	unsigned long int index;
 
 	if (ht == NULL)
 		return (0);
@@ -44,14 +57,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);
 
-	new = new_node(key, value);
+	new = new_node(&(ht->array[index]), key, value);
 
-	if (ht->array[index] == NULL)
-		ht->array[index] = new;
-	else
-	{
-		ht->array[index] = new;
-	}
-
+	if (new == NULL)
+		return (0);
 	return (1);
 }
