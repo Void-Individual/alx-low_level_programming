@@ -6,10 +6,8 @@ RM = rm -f
 
 .PHONY: all clean oclean fclean re
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) $^ -o $@
+all: $(OBJ)
+	$(CC) $^ -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
