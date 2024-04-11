@@ -31,7 +31,7 @@ int jump_search(int *array, size_t size, int value)
 			}
 			return (-1);
 		}
-		printf("Value checked array [%ld] = [%d]\n", count, array[count]);
+		printf("Value checked array[%ld] = [%d]\n", count, array[count]);
 		count += step;
 		if (count > size)
 		{
@@ -43,7 +43,7 @@ int jump_search(int *array, size_t size, int value)
 				if (count == size)
 					return (-1);
 
-				printf("Value checked array [%ld] = [%d]\n", count, array[count]);
+				printf("Value checked array[%ld] = [%d]\n", count, array[count]);
 				if (array[count] == value)
 					return ((int)count);
 			}
