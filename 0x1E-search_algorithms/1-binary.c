@@ -33,28 +33,25 @@ void print_array(int *array, size_t min, size_t max)
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t left = 0, right, middle;
+	size_t count = 0, half = size / 2;
+	int result;
 
-	if ((!array) | (value < array[0]) | (value > array[size - 1]))
+	if ((!array) | (size == 0))
 		return (-1);
 
-	right = size - 1;
+	print_array(array, count, size);
 
-	print_array(array, left, size);
-	while (left <= right)
+	if (value == array[half])
+		return ((int)half);
+	else if (value < array[half])
+		return(binary_search(array, half, value));
+	else
 	{
-		if ((left != 0) | (right != size - 1))
-			print_array(array, left, right);
-
-		middle = left + ((right - left) / 2);
-
-		printf("%ld\n", middle);
-		if (array[middle] == value)
-			return (middle);
-		else if (array[middle] < value)
-			left = middle++;
+		result = binary_search(array + half + 1, size - half - 1, value);
+        if (result == -1)
+			return (-1);
 		else
-			right = middle--;
+			return (half + 1 + result);
 	}
 
 	return (-1);
